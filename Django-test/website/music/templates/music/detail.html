@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+   <img src="{{album.album_logo}}" height="400px" width="200px">
+   <h1>Album Title: {{album.album_title}}</h1>
+   <h3>Album Artist: {{album.artist}}</h3>
+
+   <ul>
+       {% for song in album.song_set.all %}
+       <li>Song: {{song.song_title}}</li>
+       {% endfor %}
+   </ul>
+   <!--<h1> Details for Album id: {{album.album_title}}</h1>-->
+
+</body>
+</html>
